@@ -1,12 +1,12 @@
 import React from 'react';
 import './Box.css'
-const Box = ({user,result,item}) => {
+const Box = ({ start,user,result,item}) => {
 console.log(result,'result!')
   return (
     <div className={result ==='win'?'win':(result ==='lose'?'lose':'Box')}>
-      <h1>{user}</h1>
+      <h2 >{user}</h2>
       <img className='Box_img' src={item?.img}/>
-      <h2>{result}</h2>
+      <h2>{start?result:""}</h2>
     </div>
   );
 }
